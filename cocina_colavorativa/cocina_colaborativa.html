@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.145.0">
+    <title>Miguel zabal manual de introduccion a la cocina</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/album/">
+
+    <script src="../assets/js/color-modes.js"></script>
+
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="apple-touch-icon" href="../assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="../assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="../assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="../assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="../assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
+<link rel="icon" href="../assets/img/favicons/favicon.ico">
+<meta name="theme-color" content="#712cf9">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .btn-bd-primary {
+        --bd-violet-bg: #712cf9;
+        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+        --bs-btn-font-weight: 600;
+        --bs-btn-color: var(--bs-white);
+        --bs-btn-bg: var(--bd-violet-bg);
+        --bs-btn-border-color: var(--bd-violet-bg);
+        --bs-btn-hover-color: var(--bs-white);
+        --bs-btn-hover-bg: #6528e0;
+        --bs-btn-hover-border-color: #6528e0;
+        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+        --bs-btn-active-color: var(--bs-btn-hover-color);
+        --bs-btn-active-bg: #5a23c8;
+        --bs-btn-active-border-color: #5a23c8;
+      }
+
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+
+      .bd-mode-toggle .bi {
+        width: 1em;
+        height: 1em;
+      }
+
+      .bd-mode-toggle .dropdown-menu .active .bi {
+        display: block !important;
+      }
+
+      .modal-content {
+          border-radius: 1rem;
+          box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3);
+        }
+
+        .modal-body img {
+          object-fit: cover;
+          max-height: 300px;
+        }
+    </style>
+
+    
+  </head>
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+  <symbol id="check2" viewBox="0 0 16 16">
+    <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+  </symbol>
+  <symbol id="circle-half" viewBox="0 0 16 16">
+    <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+  </symbol>
+  <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+    <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+    <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+  </symbol>
+  <symbol id="sun-fill" viewBox="0 0 16 16">
+    <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+  </symbol>
+</svg>
+
+
+    <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+      <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
+        id="bd-theme"
+        type="button"
+        aria-expanded="false"
+        data-bs-toggle="dropdown"
+        
+        aria-label="Toggle theme (auto)">
+  <svg class="bi my-1 theme-icon-active" aria-hidden="true"><use href="#circle-half"></use></svg>
+  <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+</button>
+<ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+  <li>
+    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+      <svg class="bi me-2 opacity-50" aria-hidden="true"><use href="#sun-fill"></use></svg>
+      Light
+      <svg class="bi ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg>
+    </button>
+  </li>
+  <li>
+    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+      <svg class="bi me-2 opacity-50" aria-hidden="true"><use href="#moon-stars-fill"></use></svg>
+      Dark
+      <svg class="bi ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg>
+    </button>
+  </li>
+  <li>
+    <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+      <svg class="bi me-2 opacity-50" aria-hidden="true"><use href="#circle-half"></use></svg>
+      Auto
+      <svg class="bi ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg>
+    </button>
+  </li>
+</ul>
+
+    </div>
+
+    
+    <header class="sticky-top" data-bs-theme="dark">
+      <div class="navbar navbar-dark bg-dark shadow-sm">
+        <div class="container">
+          <a href="../album/indexalbum.html" class="navbar-brand d-flex align-items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="me-2" viewBox="0 0 24 24">
+              <path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1V9.5z"/>
+            </svg>
+          </a>
+          <a href="../cover/index.html" class="navbar-brand d-flex align-items-center">
+            <strong style="font-size: 2rem;">No te cortes!</strong> <!-- Aumenta el tamaño de la fuente -->
+          </a>
+        </div>
+      </div>
+    </header>
+    
+    <main>
+      <!-- Introducción -->
+
+      <section class="py-5 text-center container-fluid position-relative" style="background-image: url('../assets/img/colaborativa2.png'); background-size: cover; background-position: center;">
+        <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0, 0, 0, 0.5);"></div>
+        <div class="row py-lg-5 justify-content-center position-relative text-white">
+          <div class="col-lg-8 col-md-10">
+            <h1 class="fw-bold">Cocina colaborativa y motivacional</h1>
+            <p class="lead text-muted">
+            Cocinar juntos es más que preparar comida: es compartir, aprender y disfrutar. Este espacio busca fomentar hábitos saludables en jóvenes a través de dinámicas prácticas, divertidas y creativas.
+            </p> 
+          </div>
+        </div>
+      </section>
+    
+      <!-- Cards -->
+      <div class="album py-5 bg-body-tertiary">
+        <div class="container">
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+    
+            <!-- Card 1 -->
+            <div class="col">
+              <div class="card shadow-sm">
+                <img src="../assets/img/concursopintxos.png" style="max-height: 30vh;" class="card-img-top" alt="Concurso de pintxos">
+                <div class="card-body">
+                  <h5 class="card-title">Concurso de pintxos</h5>
+                  <p class="card-text">Mini recetas en grupo con ingredientes caseros. ¡Creatividad al poder!</p>
+                  <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalPintxos">Ver reto</button>
+                </div>
+              </div>
+            </div>
+    
+            <!-- Card 2 -->
+            <div class="col">
+              <div class="card shadow-sm">
+                <img src="../assets/img/semanal.png" style="max-height: 30vh;" class="card-img-top" alt="Reto semanal">
+                <div class="card-body">
+                  <h5 class="card-title">Reto semanal temático</h5>
+                  <p class="card-text">Un tema nuevo cada semana: vegano, de temporada... ¡y vota al chef de la semana!</p>
+                  <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalRetoSemanal">Ver reto</button>
+                </div>
+              </div>
+            </div>
+    
+            <!-- Card 3 -->
+            <div class="col">
+              <div class="card shadow-sm">
+                <img src="../assets/img/parejas.png" style="max-height: 30vh;" class="card-img-top" alt="Cocina en parejas">
+                <div class="card-body">
+                  <h5 class="card-title">Cocina en parejas</h5>
+                  <p class="card-text">Repartid roles y cocinad por turnos. Ideal para familias o amigos.</p>
+                  <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalParejas">Ver reto</button>
+                </div>
+              </div>
+            </div>
+    
+            <!-- Card 4 -->
+            <div class="col">
+              <div class="card shadow-sm">
+                <img src="../assets/img/talleres.png" style="max-height: 30vh;" class="card-img-top" alt="Taller temático">
+                <div class="card-body">
+                  <h5 class="card-title">Talleres caseros</h5>
+                  <p class="card-text">Aprende pan, salsas o cocina exprés con ingredientes simples.</p>
+                  <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalTalleres">Ver reto</button>
+                </div>
+              </div>
+            </div>
+    
+            <!-- Card 5 -->
+            <div class="col">
+              <div class="card shadow-sm">
+                <img src="../assets/img/encadenadas.png" style="max-height: 30vh;" class="card-img-top" alt="Receta encadenada">
+                <div class="card-body">
+                  <h5 class="card-title">Recetas encadenadas</h5>
+                  <p class="card-text">Empieza una receta y deja que otro la transforme. ¡Creatividad en cadena!</p>
+                  <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalEncadenadas">Ver reto</button>
+                </div>
+              </div>
+            </div>
+    
+          </div>
+        </div>
+      </div>
+      <!-- MODAL: Concurso de Pintxos -->
+        <div class="modal fade" id="modalPintxos" tabindex="-1" aria-labelledby="modalPintxosLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modalPintxosLabel">Concurso de Pintxos o Tapas en Grupo</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+              </div>
+              <div class="modal-body">
+                <p>Este reto propone organizar un concurso informal y creativo de pintxos (tapas pequeñas), perfecto para grupos de amigos, familias o incluso vía videollamada. Se trata de fomentar la creatividad, la presentación y el disfrute culinario en equipo.</p>
+
+                <h6>¿Cómo se organiza?</h6>
+                <ol>
+                  <li>Cada persona elige una mini receta que pueda preparar con ingredientes que tenga en casa.</li>
+                  <li>El objetivo es preparar un pintxo o tapa en menos de 15 minutos.</li>
+                  <li>Se valora:
+                    <ul>
+                      <li>✔️ Originalidad de la receta.</li>
+                      <li>✔️ Presentación visual.</li>
+                      <li>✔️ Combinación de sabores o contrastes.</li>
+                    </ul>
+                  </li>
+                  <li>Los participantes comparten una foto, vídeo o explican la receta.</li>
+                </ol>
+
+                <h6>Opcionales divertidos</h6>
+                <ul>
+                  <li>Usar un “ingrediente sorpresa” que todos deben incluir (ej: plátano, queso, zanahoria...)</li>
+                  <li>Crear una historia para presentar el pintxo (nombre, inspiración, etc.).</li>
+                  <li>Invitar a alguien a ser “jurado” y dar puntos en distintas categorías.</li>
+                </ul>
+
+                <h6>Objetivos pedagógicos</h6>
+                <ul>
+                  <li>Fomentar la creatividad y presentación de alimentos.</li>
+                  <li>Desarrollar autonomía al elegir y preparar una receta propia.</li>
+                  <li>Mejorar habilidades de comunicación al presentar el plato.</li>
+                  <li>Crear una experiencia culinaria compartida, incluso a distancia.</li>
+                </ul>
+
+                <p class="text-muted mt-3">✨ Este reto es perfecto para romper el hielo en talleres o como actividad semanal entre amigos o estudiantes.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+       <!-- MODAL: Reto de Cocina Semanal -->
+      <div class="modal fade" id="modalRetoSemanal" tabindex="-1" aria-labelledby="modalRetoSemanalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalRetoSemanalLabel">Reto de Cocina Semanal</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+              <p>Este reto propone elegir una temática culinaria diferente cada semana para fomentar la variedad y el descubrimiento. Ideal para practicar nuevas recetas y salir de la rutina.</p>
+
+              <h6>¿Cómo participar?</h6>
+              <ol>
+                <li>Establecer una temática semanal: por ejemplo, cocina vegana, italiana, sin gluten, recetas con huevo, platos fríos, etc.</li>
+                <li>Cada participante debe preparar al menos una receta que cumpla con esa temática.</li>
+                <li>Se comparte el resultado con una foto, receta o vídeo corto (por WhatsApp, grupo privado o redes sociales).</li>
+                <li>Al final de la semana se elige un "Chef de la Semana" según voto popular.</li>
+              </ol>
+
+              <h6>Variaciones</h6>
+              <ul>
+                <li>Elegir ingredientes comunes para todos (por ejemplo: lentejas, arroz o manzana).</li>
+                <li>Incluir un reto adicional: sin sal, sin aceite, solo 3 ingredientes, etc.</li>
+              </ul>
+
+              <h6>Objetivos pedagógicos</h6>
+              <ul>
+                <li>Fomentar el compromiso y la constancia.</li>
+                <li>Introducir nuevos alimentos en la dieta.</li>
+                <li>Aprender sobre la cocina del mundo.</li>
+                <li>Trabajar en comunidad, aunque sea a distancia.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MODAL: Cocina en Parejas o Equipos -->
+      <div class="modal fade" id="modalParejas" tabindex="-1" aria-labelledby="modalParejasLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalParejasLabel">Cocina en Parejas o Equipos</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+              <p>Este reto se basa en la cooperación activa entre dos personas o más, fomentando el trabajo en equipo y el aprendizaje mutuo mientras se cocina.</p>
+
+              <h6>Dinámica propuesta</h6>
+              <ul>
+                <li>Los participantes se reparten los roles: uno es el cocinero, el otro el guía o lector de receta. Luego se invierten los papeles.</li>
+                <li>Pueden turnarse por pasos o por recetas distintas (entrada y plato principal, por ejemplo).</li>
+                <li>Se recomienda grabar el proceso o anotar los errores y aciertos para comentar luego.</li>
+              </ul>
+
+              <h6>Ventajas del reto</h6>
+              <ul>
+                <li>Desarrolla la comunicación efectiva.</li>
+                <li>Potencia la escucha activa y la paciencia.</li>
+                <li>Es ideal para realizar en familia (padres e hijos), entre compañeros de piso o en pareja.</li>
+              </ul>
+
+              <h6>Objetivos pedagógicos</h6>
+              <ul>
+                <li>Fortalecer la confianza mutua.</li>
+                <li>Aprender a delegar tareas y cooperar.</li>
+                <li>Estimular el interés por la cocina desde lo social y emocional.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MODAL: Talleres Temáticos Caseros -->
+      <div class="modal fade" id="modalTalleres" tabindex="-1" aria-labelledby="modalTalleresLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalTalleresLabel">Talleres Temáticos Caseros</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+              <p>Esta propuesta invita a organizar sesiones centradas en un aprendizaje específico. El objetivo es descubrir, con profundidad y en poco tiempo, una nueva técnica o receta.</p>
+
+              <h6>Ejemplos de talleres</h6>
+              <ul>
+                <li>Amasar pan desde cero.</li>
+                <li>Preparar salsas caseras (pesto, mayonesa, tomate frito...).</li>
+                <li>Cocina de "3 ingredientes".</li>
+                <li>Repostería fácil (bizcochos, galletas, mugcakes...)</li>
+              </ul>
+
+              <h6>Modalidades</h6>
+              <ul>
+                <li>Individuales, en casa, siguiendo vídeos o fichas.</li>
+                <li>En grupo con familia/amigos, donde cada uno enseña algo.</li>
+                <li>Invitando a una persona con experiencia (abuela, tío, amigo cocinero...).</li>
+              </ul>
+
+              <h6>Objetivos pedagógicos</h6>
+              <ul>
+                <li>Aprendizaje técnico de forma informal.</li>
+                <li>Valorar la experiencia de generaciones anteriores.</li>
+                <li>Desarrollar habilidades específicas de forma lúdica.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MODAL: Recetas Encadenadas -->
+      <div class="modal fade" id="modalEncadenadas" tabindex="-1" aria-labelledby="modalEncadenadasLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalEncadenadasLabel">Recetas Encadenadas</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+              <p>Este reto está diseñado como una cadena creativa. Cada participante recibe una receta base y debe modificarla para crear una nueva.</p>
+
+              <h6>Ejemplo de secuencia:</h6>
+              <ol>
+                <li>Primer participante: Arroz blanco.</li>
+                <li>Siguiente: Arroz frito con verduras.</li>
+                <li>Otro: Empanadillas rellenas de arroz frito.</li>
+                <li>Y así sucesivamente...</li>
+              </ol>
+
+              <h6>Reglas sugeridas</h6>
+              <ul>
+                <li>Cada receta debe conservar al menos un ingrediente del anterior plato.</li>
+                <li>Se documenta el cambio con una foto o breve descripción del proceso.</li>
+              </ul>
+
+              <h6>Objetivos pedagógicos</h6>
+              <ul>
+                <li>Desarrollar creatividad y resolución de problemas.</li>
+                <li>Aprender a reutilizar y transformar alimentos.</li>
+                <li>Fomentar la participación colectiva en cadena.</li>
+                <li>Potenciar la improvisación y adaptabilidad.</li>
+              </ul>
+
+              <p class="mt-3 text-muted">
+                🌱 Este reto puede durar varios días o semanas. Ideal para grupos de clase o familia que quieran mantener una actividad continua.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+     
+    
+
+      <footer class="text-body-secondary py-5">
+        <div class="container">
+          <p class="float-end mb-1">
+            <a href="#">Back to top</a>
+          </p>
+          <p class="mb-1">Manual web de introudccion a la cocina por: Miguel Zabal</p>
+        </div>
+      </footer>
+      <script defer src="../assets/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"></script>
+      <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

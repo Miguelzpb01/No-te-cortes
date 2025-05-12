@@ -1,0 +1,93 @@
+
+    <main class="overflow-hidden">
+      <div class="album py-5 bg-body-tertiary container-fluid px-0">
+        <div class="container mb-5">
+          <h1 class="mb-4">Seguridad e Higiene</h1>
+        </div>
+    
+        <!-- Fila 1: Contaminación cruzada -->
+        <div class="row g-0 mb-5 align-items-center" style="min-height: 60vh;">
+          <!-- Imagen -->
+          <div class="col-md-6 d-flex justify-content-center align-items-center">
+            <div class="w-75">
+              <img src="../assets/img/contaminacion.png" class="img-fluid" alt="Contaminación cruzada">
+            </div>
+          </div>
+          <!-- Texto -->
+          <div class="col-md-6 p-4 bg-body-tertiary">
+            <div class="text-start" style="text-align: justify;">
+              <h2 class="mb-3">Contaminación Cruzada</h2>
+              <p>
+                La contaminación cruzada es una de las principales causas de enfermedades transmitidas por alimentos. Se produce cuando bacterias o alérgenos se transfieren de un alimento a otro, ya sea por contacto directo o mediante utensilios, manos o superficies contaminadas.
+              </p>
+              <p>
+                <strong>Ejemplo:</strong> Usar el mismo cuchillo para cortar carne cruda y verduras sin lavarlo adecuadamente puede generar intoxicaciones.
+              </p>
+              <ul>
+                <li>Usa tablas de cortar separadas para carnes, pescados y vegetales.</li>
+                <li>Lava las manos y utensilios con agua caliente y jabón tras cada uso.</li>
+                <li>Almacena los alimentos de forma separada en recipientes cerrados.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Fila 2: Manipulación y temperaturas -->
+        <div class="row g-0 mb-5 align-items-center flex-md-row-reverse" style="min-height: 60vh;">
+          <!-- Imagen -->
+          <div class="col-md-6 d-flex justify-content-center align-items-center">
+            <div class="w-75">
+              <img src="../assets/img/temperaturas.png" class="img-fluid" alt="Manipulación y temperaturas">
+            </div>
+          </div>
+          <!-- Texto -->
+          <div class="col-md-6 p-4 bg-body-tertiary">
+            <div class="text-start" style="text-align: justify;">
+              <h2 class="mb-3">Manipulación de Alimentos y Temperaturas</h2>
+              <p>
+                Una correcta higiene en la cocina es clave para evitar la proliferación de bacterias. La temperatura y la limpieza son los pilares fundamentales para conservar los alimentos de forma segura.
+              </p>
+              <p>
+                <strong>Zonas de riesgo:</strong> Las temperaturas entre 5 °C y 65 °C favorecen el crecimiento de microorganismos.
+              </p>
+              <ul>
+                <li>Lava los utensilios y superficies con agua caliente y detergente.</li>
+                <li>Evita dejar alimentos cocinados a temperatura ambiente por más de 2 horas.</li>
+                <li>Usa termómetros para verificar la cocción y refrigeración adecuada.</li>
+              </ul>
+              
+            </div>
+          </div>
+        </div>
+    
+        <!-- Fila 3: Uso seguro de herramientas -->
+        <div class="row g-0 mb-5 align-items-center" style="min-height: 60vh;">
+          <!-- Imagen -->
+          <div class="col-md-6 d-flex justify-content-center align-items-center">
+            <div class="w-75">
+              <img src="../assets/img/seguridad.jpg" class="img-fluid" alt="Uso seguro de herramientas">
+            </div>
+          </div>
+          <!-- Texto -->
+          <div class="col-md-6 p-4 bg-body-tertiary">
+            <div class="text-start" style="text-align: justify;">
+              <h2 class="mb-3">Uso Seguro de Herramientas y Electrodomésticos</h2>
+              <p>
+                Conocer el uso correcto de cuchillos, fuegos, hornos y aparatos eléctricos puede prevenir accidentes como cortes, quemaduras y descargas eléctricas.
+              </p>
+              <ul>
+                <li>Mantén cuchillos afilados y guardados en un lugar seguro.</li>
+                <li>No uses paños húmedos para manipular objetos calientes.</li>
+                <li>Desenchufa los aparatos eléctricos cuando no los estés usando.</li>
+                <li>No sobrecargues los enchufes múltiples y revisa cables en mal estado.</li>
+              </ul>
+              <p>
+                La prevención comienza con el conocimiento y la atención en cada paso que se da dentro de la cocina.
+              </p>
+              
+            </div>
+          </div>
+        </div>
+    
+      </div>
+    </main>

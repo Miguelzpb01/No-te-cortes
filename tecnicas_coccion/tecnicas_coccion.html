@@ -1,0 +1,628 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.145.0">
+    <title>Miguel zabal manual de introduccion a la cocina</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/album/">
+
+    <script src="../assets/js/color-modes.js"></script>
+
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="apple-touch-icon" href="../assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="../assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="../assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="../assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="../assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
+<link rel="icon" href="../assets/img/favicons/favicon.ico">
+<meta name="theme-color" content="#712cf9">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .btn-bd-primary {
+        --bd-violet-bg: #712cf9;
+        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+        --bs-btn-font-weight: 600;
+        --bs-btn-color: var(--bs-white);
+        --bs-btn-bg: var(--bd-violet-bg);
+        --bs-btn-border-color: var(--bd-violet-bg);
+        --bs-btn-hover-color: var(--bs-white);
+        --bs-btn-hover-bg: #6528e0;
+        --bs-btn-hover-border-color: #6528e0;
+        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+        --bs-btn-active-color: var(--bs-btn-hover-color);
+        --bs-btn-active-bg: #5a23c8;
+        --bs-btn-active-border-color: #5a23c8;
+      }
+
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+
+      .bd-mode-toggle .bi {
+        width: 1em;
+        height: 1em;
+      }
+
+      .bd-mode-toggle .dropdown-menu .active .bi {
+        display: block !important;
+      }
+    </style>
+
+    
+  </head>
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+  <symbol id="check2" viewBox="0 0 16 16">
+    <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+  </symbol>
+  <symbol id="circle-half" viewBox="0 0 16 16">
+    <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+  </symbol>
+  <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+    <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+    <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+  </symbol>
+  <symbol id="sun-fill" viewBox="0 0 16 16">
+    <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+  </symbol>
+</svg>
+
+
+    <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+      <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
+        id="bd-theme"
+        type="button"
+        aria-expanded="false"
+        data-bs-toggle="dropdown"
+        
+        aria-label="Toggle theme (auto)">
+  <svg class="bi my-1 theme-icon-active" aria-hidden="true"><use href="#circle-half"></use></svg>
+  <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+</button>
+<ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+  <li>
+    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+      <svg class="bi me-2 opacity-50" aria-hidden="true"><use href="#sun-fill"></use></svg>
+      Light
+      <svg class="bi ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg>
+    </button>
+  </li>
+  <li>
+    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+      <svg class="bi me-2 opacity-50" aria-hidden="true"><use href="#moon-stars-fill"></use></svg>
+      Dark
+      <svg class="bi ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg>
+    </button>
+  </li>
+  <li>
+    <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+      <svg class="bi me-2 opacity-50" aria-hidden="true"><use href="#circle-half"></use></svg>
+      Auto
+      <svg class="bi ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg>
+    </button>
+  </li>
+</ul>
+
+    </div>
+
+    
+    <header class="sticky-top" data-bs-theme="dark">
+      <div class="navbar navbar-dark bg-dark shadow-sm">
+        <div class="container">
+          <a href="../album/indexalbum.html" class="navbar-brand d-flex align-items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="me-2" viewBox="0 0 24 24">
+              <path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1V9.5z"/>
+            </svg>
+          </a>
+          <a href="../cover/index.html" class="navbar-brand d-flex align-items-center">
+            <strong style="font-size: 2rem;">No te cortes!</strong> <!-- Aumenta el tamaño de la fuente -->
+          </a>
+        </div>
+      </div>
+    </header>
+    
+
+    <main>
+      <div class="album py-5 bg-body-tertiary container-fluid px-0">
+        <div class="container mb-5">
+          <h1 class="mb-4">Técnicas de cocción</h1>
+          <h4>Descubre los diferentes métodos para cocinar tus alimentos de forma saludable y deliciosa, optimizando texturas, sabores y nutrientes.</h4>
+        </div>
+    
+        <div class="album py-4 bg-body-tertiary">
+          <div class="container">
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+              <!-- Cocción en seco -->
+              <div class="col">
+                <div class="card h-100 shadow-sm">
+                  <img src="../assets/img/medioseco.jpg" class="card-img-top" alt="Cocción en seco">
+                  <div class="card-body">
+                    <h5 class="card-title">Cocción en seco</h5>
+                    <p class="card-text">Horno, asado, parrilla... cocción sin líquidos que potencia sabores y texturas.</p>
+                    <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalSeco">Ver más</button>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- Cocción en medio graso -->
+              <div class="col">
+                <div class="card h-100 shadow-sm">
+                  <img src="../assets/img/mediograso.jpg" class="card-img-top" alt="Cocción en medio graso">
+                  <div class="card-body">
+                    <h5 class="card-title">Cocción en medio graso</h5>
+                    <p class="card-text">Sofritos, frituras, salteados... métodos que requieren grasas como vehículo de calor.</p>
+                    <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalGraso">Ver más</button>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- Cocción por humedad -->
+              <div class="col">
+                <div class="card h-100 shadow-sm">
+                  <img src="../assets/img/Diseno-sin-titulo-1-8.jpg" class="card-img-top" alt="Cocción por humedad">
+                  <div class="card-body">
+                    <h5 class="card-title">Cocción por humedad</h5>
+                    <p class="card-text">Hervido, escalfado, vapor... ideales para conservar nutrientes y sabores naturales.</p>
+                    <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalHumedad">Ver más</button>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- Cocción mixta -->
+              <div class="col">
+                <div class="card h-100 shadow-sm">
+                  <img src="../assets/img/mediomixto.jpg" class="card-img-top" alt="Cocción mixta">
+                  <div class="card-body">
+                    <h5 class="card-title">Cocción mixta</h5>
+                    <p class="card-text">Estofados y guisos que combinan métodos secos y húmedos para máximo sabor y textura.</p>
+                    <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalMixta">Ver más</button>
+                  </div>
+                </div>
+              </div>
+    
+            </div>
+          </div>
+      </div>
+   
+    
+      <!-- Modal: Cocción en Seco -->
+        <div class="modal fade" id="modalSeco" tabindex="-1" aria-labelledby="modalSecoLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modalSecoLabel">Cocción en Seco</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+              </div>
+              <div class="modal-body">
+                <p>La cocción en seco utiliza calor sin la intervención de líquidos o grasas. Este tipo de técnica realza sabores, genera costras doradas y conserva texturas crujientes.</p>
+                
+                <div class="accordion accordion-flush" id="accordionSeco">
+                  
+                  <!-- Horneado -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingHorneado">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseHorneado" aria-expanded="false" aria-controls="flush-collapseHorneado">
+                        Horneado
+                      </button>
+                    </h2>
+                    <div id="flush-collapseHorneado" class="accordion-collapse collapse" aria-labelledby="flush-headingHorneado" data-bs-parent="#accordionSeco">
+                      <div class="accordion-body">
+                        <div class="row">
+                          <div class="col-md-4 mb-3">
+                            <img src="../assets/img/horneado.jpg" alt="Horneado" class="img-fluid rounded">
+                          </div>
+                          <div class="col-md-8">
+                            <p>El horneado es una técnica que se basa en la cocción con aire caliente, distribuido dentro de un horno. Es ideal para panes, bizcochos, carnes, vegetales o pescados.</p>
+                            <p>Temperatura habitual: entre 160 °C y 220 °C. Siempre se recomienda precalentar el horno para garantizar una cocción uniforme.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Asado -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingAsado">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseAsado" aria-expanded="false" aria-controls="flush-collapseAsado">
+                        Asado
+                      </button>
+                    </h2>
+                    <div id="flush-collapseAsado" class="accordion-collapse collapse" aria-labelledby="flush-headingAsado" data-bs-parent="#accordionSeco">
+                      <div class="accordion-body">
+                        <div class="row">
+                          <div class="col-md-4 mb-3">
+                            <img src="../assets/img/asado.jpg" alt="Asado" class="img-fluid rounded">
+                          </div>
+                          <div class="col-md-8">
+                            <p>El asado se realiza en horno o brasas a temperaturas altas, generalmente por encima de los 200 °C, lo que permite dorar el exterior y conservar jugos internos.</p>
+                            <p>Se emplea principalmente en carnes, aves enteras o pescados grandes, generando sabores profundos y una textura crujiente externa.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Parrilla -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingParrilla">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseParrilla" aria-expanded="false" aria-controls="flush-collapseParrilla">
+                        Parrilla
+                      </button>
+                    </h2>
+                    <div id="flush-collapseParrilla" class="accordion-collapse collapse" aria-labelledby="flush-headingParrilla" data-bs-parent="#accordionSeco">
+                      <div class="accordion-body">
+                        <div class="row">
+                          <div class="col-md-4 mb-3">
+                            <img src="../assets/img/parrilla.jpg" alt="Parrilla" class="img-fluid rounded">
+                          </div>
+                          <div class="col-md-8">
+                            <p>Consiste en colocar los alimentos sobre una rejilla o parrilla a calor directo (brasas, gas o eléctrica). Se utiliza mucho para carnes, verduras y embutidos.</p>
+                            <p>Esta técnica proporciona un sabor ahumado característico y una textura externa marcada por el sellado.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Freidora de aire -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingFreidora">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFreidora" aria-expanded="false" aria-controls="flush-collapseFreidora">
+                        Freidora de aire
+                      </button>
+                    </h2>
+                    <div id="flush-collapseFreidora" class="accordion-collapse collapse" aria-labelledby="flush-headingFreidora" data-bs-parent="#accordionSeco">
+                      <div class="accordion-body">
+                        <div class="row">
+                          <div class="col-md-4 mb-3">
+                            <img src="../assets/img/freidoraaire.jpeg" alt="Freidora de aire" class="img-fluid rounded">
+                          </div>
+                          <div class="col-md-8">
+                            <p>La freidora de aire cocina los alimentos haciendo circular aire caliente a alta velocidad. Logra resultados similares a una fritura, pero con muy poco o nada de aceite.</p>
+                            <p>Es ideal para versiones más saludables de papas fritas, empanados, nuggets y otros alimentos crujientes.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div> <!-- end accordion -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <!-- Modal: Cocción en Medio Graso -->
+<div class="modal fade" id="modalGraso" tabindex="-1" aria-labelledby="modalGrasoLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalGrasoLabel">Cocción en Medio Graso</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p>La cocción en medio graso emplea aceites o grasas como vehículo de calor. Dependiendo de la técnica, la cantidad de grasa puede variar de unas gotas a una inmersión total.</p>
+
+        <div class="accordion accordion-flush" id="accordionGraso">
+          
+          <!-- Sofrito -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingSofrito">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSofrito" aria-expanded="false" aria-controls="flush-collapseSofrito">
+                Sofrito
+              </button>
+            </h2>
+            <div id="flush-collapseSofrito" class="accordion-collapse collapse" aria-labelledby="flush-headingSofrito" data-bs-parent="#accordionGraso">
+              <div class="accordion-body">
+                <div class="row">
+                  <div class="col-md-4 mb-3">
+                    <img src="../assets/img/sofrito.jpg" alt="Sofrito" class="img-fluid rounded">
+                  </div>
+                  <div class="col-md-8">
+                    <p>El sofrito consiste en cocinar ingredientes picados (como cebolla, ajo, pimiento o tomate) con una pequeña cantidad de aceite. Es la base de muchas recetas tradicionales.</p>
+                    <p>Realza sabores y aromas al liberar compuestos esenciales, formando una base sabrosa para guisos, arroces, salsas y estofados.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Fritura -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingFritura">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFritura" aria-expanded="false" aria-controls="flush-collapseFritura">
+                Fritura
+              </button>
+            </h2>
+            <div id="flush-collapseFritura" class="accordion-collapse collapse" aria-labelledby="flush-headingFritura" data-bs-parent="#accordionGraso">
+              <div class="accordion-body">
+                <div class="row">
+                  <div class="col-md-4 mb-3">
+                    <img src="../assets/img/fritura.jpg" alt="Fritura" class="img-fluid rounded">
+                  </div>
+                  <div class="col-md-8">
+                    <p>Implica sumergir los alimentos completamente en aceite caliente (160 °C a 190 °C), logrando una cocción rápida y un exterior crujiente.</p>
+                    <p>Ideal para croquetas, empanadillas, papas fritas, calamares, etc. Se debe usar aceite limpio y mantener una temperatura constante para evitar grasas quemadas.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Salteado -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingSalteado">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSalteado" aria-expanded="false" aria-controls="flush-collapseSalteado">
+                    Salteado
+                  </button>
+                </h2>
+                <div id="flush-collapseSalteado" class="accordion-collapse collapse" aria-labelledby="flush-headingSalteado" data-bs-parent="#accordionGraso">
+                  <div class="accordion-body">
+                    <div class="row">
+                      <div class="col-md-4 mb-3">
+                        <img src="../assets/img/salteado.jpg" alt="Salteado" class="img-fluid rounded">
+                      </div>
+                      <div class="col-md-8">
+                        <p>Se realiza con poca cantidad de aceite a fuego alto. Los alimentos se cortan en trozos pequeños y se mueven constantemente.</p>
+                        <p>Esta técnica mantiene los ingredientes crujientes y con sabor intenso. Muy usada en cocina asiática, especialmente para verduras y proteínas.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+                  </div> <!-- end accordion -->
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        <!-- Modal: Cocción por Humedad -->
+<div class="modal fade" id="modalHumedad" tabindex="-1" aria-labelledby="modalHumedadLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalHumedadLabel">Cocción por Humedad</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p>La cocción por humedad utiliza líquidos (agua, caldo, leche, etc.) o vapor como medio de transmisión de calor. Es ideal para cocciones suaves, con buena conservación de nutrientes y texturas.</p>
+
+        <div class="accordion accordion-flush" id="accordionHumedad">
+
+          <!-- Hervido -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingHervido">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseHervido" aria-expanded="false" aria-controls="flush-collapseHervido">
+                Hervido
+              </button>
+            </h2>
+            <div id="flush-collapseHervido" class="accordion-collapse collapse" aria-labelledby="flush-headingHervido" data-bs-parent="#accordionHumedad">
+              <div class="accordion-body">
+                <div class="row">
+                  <div class="col-md-4 mb-3">
+                    <img src="../assets/img/hervir.jpg" alt="Hervido" class="img-fluid rounded">
+                  </div>
+                  <div class="col-md-8">
+                    <p>Se cocina el alimento sumergido en líquido (agua o caldo) a 100 °C. Es una técnica muy común para pastas, verduras o legumbres.</p>
+                    <p>Permite una cocción uniforme y sencilla, aunque puede provocar pérdida de vitaminas solubles en agua si se excede el tiempo.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Escalfado -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingEscalfado">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEscalfado" aria-expanded="false" aria-controls="flush-collapseEscalfado">
+                Escalfado
+              </button>
+            </h2>
+            <div id="flush-collapseEscalfado" class="accordion-collapse collapse" aria-labelledby="flush-headingEscalfado" data-bs-parent="#accordionHumedad">
+              <div class="accordion-body">
+                <div class="row">
+                  <div class="col-md-4 mb-3">
+                    <img src="../assets/img/escalfado.jpeg" alt="Escalfado" class="img-fluid rounded">
+                  </div>
+                  <div class="col-md-8">
+                    <p>Consiste en cocinar en líquido a baja temperatura (65-80 °C), sin llegar a hervir. Es ideal para huevos y pescados delicados.</p>
+                    <p>Mantiene la forma y suavidad de los ingredientes, sin agredir su textura ni sabor.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cocción al vapor -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingVapor">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseVapor" aria-expanded="false" aria-controls="flush-collapseVapor">
+                Cocción al Vapor
+              </button>
+            </h2>
+            <div id="flush-collapseVapor" class="accordion-collapse collapse" aria-labelledby="flush-headingVapor" data-bs-parent="#accordionHumedad">
+              <div class="accordion-body">
+                <div class="row">
+                  <div class="col-md-4 mb-3">
+                    <img src="../assets/img/vapor.jpg" alt="Cocción al vapor" class="img-fluid rounded">
+                  </div>
+                  <div class="col-md-8">
+                    <p>Los alimentos se cocinan mediante el vapor generado por agua hirviendo. No están en contacto directo con el líquido.</p>
+                    <p>Conserva mejor el sabor, color y nutrientes. Es muy utilizada en dietas saludables y cocina asiática.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Baño María -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingBanoMaria">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseBanoMaria" aria-expanded="false" aria-controls="flush-collapseBanoMaria">
+                Baño María
+              </button>
+            </h2>
+            <div id="flush-collapseBanoMaria" class="accordion-collapse collapse" aria-labelledby="flush-headingBanoMaria" data-bs-parent="#accordionHumedad">
+              <div class="accordion-body">
+                <div class="row">
+                  <div class="col-md-4 mb-3">
+                    <img src="../assets/img/banomaria.jpeg" alt="Baño María" class="img-fluid rounded">
+                  </div>
+                  <div class="col-md-8">
+                    <p>El alimento se coloca dentro de un recipiente que, a su vez, está dentro de otro con agua caliente. El calor se transfiere suavemente.</p>
+                        <p>Ideal para flanes, chocolates, natillas o preparaciones delicadas que requieren temperatura controlada sin contacto directo con el fuego.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+                </div> <!-- end accordion -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Modal: Cocción Mixta -->
+<div class="modal fade" id="modalMixta" tabindex="-1" aria-labelledby="modalMixtaLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalMixtaLabel">Cocción Mixta</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p>La cocción mixta combina técnicas en seco y húmedo dentro de una misma preparación. Es muy útil para obtener texturas tiernas y sabores profundos, especialmente en carnes duras o platos de larga cocción.</p>
+
+        <div class="accordion accordion-flush" id="accordionMixta">
+
+          <!-- Estofado -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingEstofado">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEstofado" aria-expanded="false" aria-controls="flush-collapseEstofado">
+                Estofado
+              </button>
+            </h2>
+            <div id="flush-collapseEstofado" class="accordion-collapse collapse" aria-labelledby="flush-headingEstofado" data-bs-parent="#accordionMixta">
+              <div class="accordion-body">
+                <div class="row">
+                  <div class="col-md-4 mb-3">
+                    <img src="../assets/img/estofado.jpg" alt="Estofado" class="img-fluid rounded">
+                  </div>
+                  <div class="col-md-8">
+                    <p>Consiste en dorar previamente los ingredientes (habitualmente carne) en grasa caliente, para luego cocerlos lentamente en líquido con tapa.</p>
+                    <p>Es ideal para ablandar cortes duros, concentrar sabores y lograr una textura melosa. Se cocina a fuego bajo y durante largo tiempo.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Guiso -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingGuiso">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseGuiso" aria-expanded="false" aria-controls="flush-collapseGuiso">
+                Guiso
+              </button>
+            </h2>
+                      <div id="flush-collapseGuiso" class="accordion-collapse collapse" aria-labelledby="flush-headingGuiso" data-bs-parent="#accordionMixta">
+                        <div class="accordion-body">
+                          <div class="row">
+                            <div class="col-md-4 mb-3">
+                              <img src="../assets/img/guiso.jpg" alt="Guiso" class="img-fluid rounded">
+                            </div>
+                            <div class="col-md-8">
+                              <p>Similar al estofado, pero con más cantidad de líquido, lo que permite crear salsas abundantes. Se cuece también a fuego lento.</p>
+                              <p>Los guisos son platos completos que integran proteínas, vegetales y legumbres, resultando muy nutritivos y reconfortantes.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div> <!-- end accordion -->
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+    </main>
+    
+
+      <footer class="text-body-secondary py-5">
+        <div class="container">
+          <p class="float-end mb-1">
+            <a href="#">Back to top</a>
+          </p>
+          <p class="mb-1">Manual web de introudccion a la cocina por: Miguel Zabal</p>
+        </div>
+      </footer>
+      <script defer src="../assets/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"></script>
+      <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

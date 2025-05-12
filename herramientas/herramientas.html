@@ -1,0 +1,1192 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.145.0">
+    <title>Miguel zabal manual de introduccion a la cocina</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/album/">
+
+    <script src="../assets/js/color-modes.js"></script>
+
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="apple-touch-icon" href="../assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="../assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="../assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="../assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="../assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
+<link rel="icon" href="../assets/img/favicons/favicon.ico">
+<meta name="theme-color" content="#712cf9">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .btn-bd-primary {
+        --bd-violet-bg: #712cf9;
+        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+        --bs-btn-font-weight: 600;
+        --bs-btn-color: var(--bs-white);
+        --bs-btn-bg: var(--bd-violet-bg);
+        --bs-btn-border-color: var(--bd-violet-bg);
+        --bs-btn-hover-color: var(--bs-white);
+        --bs-btn-hover-bg: #6528e0;
+        --bs-btn-hover-border-color: #6528e0;
+        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+        --bs-btn-active-color: var(--bs-btn-hover-color);
+        --bs-btn-active-bg: #5a23c8;
+        --bs-btn-active-border-color: #5a23c8;
+      }
+
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+
+      .bd-mode-toggle .bi {
+        width: 1em;
+        height: 1em;
+      }
+
+      .bd-mode-toggle .dropdown-menu .active .bi {
+        display: block !important;
+      }
+
+      .modal-body img {
+        max-height: 50vh;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        display: block;
+        margin: 0 auto;
+      }
+    </style>
+
+    
+  </head>
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+  <symbol id="check2" viewBox="0 0 16 16">
+    <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+  </symbol>
+  <symbol id="circle-half" viewBox="0 0 16 16">
+    <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+  </symbol>
+  <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+    <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+    <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+  </symbol>
+  <symbol id="sun-fill" viewBox="0 0 16 16">
+    <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+  </symbol>
+</svg>
+
+
+    <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+      <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
+        id="bd-theme"
+        type="button"
+        aria-expanded="false"
+        data-bs-toggle="dropdown"
+        
+        aria-label="Toggle theme (auto)">
+  <svg class="bi my-1 theme-icon-active" aria-hidden="true"><use href="#circle-half"></use></svg>
+  <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+</button>
+<ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+  <li>
+    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+      <svg class="bi me-2 opacity-50" aria-hidden="true"><use href="#sun-fill"></use></svg>
+      Light
+      <svg class="bi ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg>
+    </button>
+  </li>
+  <li>
+    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+      <svg class="bi me-2 opacity-50" aria-hidden="true"><use href="#moon-stars-fill"></use></svg>
+      Dark
+      <svg class="bi ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg>
+    </button>
+  </li>
+  <li>
+    <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+      <svg class="bi me-2 opacity-50" aria-hidden="true"><use href="#circle-half"></use></svg>
+      Auto
+      <svg class="bi ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg>
+    </button>
+  </li>
+</ul>
+
+    </div>
+
+    
+    <header class="sticky-top" data-bs-theme="dark">
+      <div class="navbar navbar-dark bg-dark shadow-sm">
+        <div class="container">
+          <a href="../album/indexalbum.html" class="navbar-brand d-flex align-items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="me-2" viewBox="0 0 24 24">
+              <path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1V9.5z"/>
+            </svg>
+          </a>
+          <a href="../cover/index.html" class="navbar-brand d-flex align-items-center">
+            <strong style="font-size: 2rem;">No te cortes!</strong> <!-- Aumenta el tamaño de la fuente -->
+          </a>
+        </div>
+      </div>
+    </header>
+    
+
+    <main>
+      <div class="album py-5 bg-body-tertiary container-fluid px-0">
+        <div class="container mb-5">
+          <h1 class="mb-4">Herramientas y Utensilios Básicos</h1>
+          <h4><i class="bi bi-tools"></i> No necesitas tenerlo todo, sino entender para qué sirve cada herramienta y cómo sacarle partido en tu cocina.</h4>
+          <p class="mt-3">Contar con las herramientas adecuadas es fundamental para trabajar de manera eficiente y segura en la cocina. No se trata de tener la mayor cantidad de utensilios, sino de conocer su uso, características y beneficios para sacarles el máximo provecho. Además, dentro del manual web se proporcionarán consejos para sustituir algunos de los utensilios por otros que comúnmente se tienen en cocinas caseras.</p>
+        </div>
+    
+        <div class="container">
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+    
+            <!-- Card: Cuchillos y corte -->
+            <div class="col">
+              <div class="card shadow-sm d-flex flex-column" style="max-height: 80vh;">
+                <div style="flex-shrink: 0;">
+                  <img src="../assets/img/cuchillos.jpg" class="card-img-top" style="height: 250px; object-fit: cover;" alt="Cuchillos y herramientas de corte">
+                </div>
+                <div class="card-body overflow-auto">
+                  <h5 class="card-title">Cuchillos y herramientas de corte</h5>
+                  <p class="card-text">Desde cuchillos de chef hasta peladores: piezas clave para una cocina segura y eficiente.</p>
+                  <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalCorte">Ver herramientas</button>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Card: Sistemas de calor y cocción -->
+            <div class="col">
+              <div class="card shadow-sm d-flex flex-column" style="max-height: 80vh;">
+                <div style="flex-shrink: 0;">
+                  <img src="../assets/img/coccion.jpg" class="card-img-top" style="height: 250px; object-fit: cover;" alt="Sistemas de calor y cocción">
+                </div>
+                <div class="card-body overflow-auto">
+                  <h5 class="card-title">Sistemas de calor y cocción</h5>
+                  <p class="card-text">Cocinas, hornos y más: cómo funcionan y cuál elegir.</p>
+                  <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalCalor">Ver herramientas</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card: Ollas y recipientes -->
+            <div class="col">
+              <div class="card shadow-sm d-flex flex-column" style="max-height: 80vh;">
+                <div style="flex-shrink: 0;">
+                  <img src="../assets/img/ollas.jpg" class="card-img-top" style="height: 250px; object-fit: cover;" alt="Ollas y sartenes">
+                </div>
+                <div class="card-body overflow-auto">
+                  <h5 class="card-title">Ollas, sartenes y recipientes</h5>
+                  <p class="card-text">Comparativa de materiales: inox, teflón, hierro fundido y más.</p>
+                  <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalRecipientes">Ver herramientas</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card: Utensilios de manipulación -->
+            <div class="col">
+              <div class="card shadow-sm d-flex flex-column" style="max-height: 80vh;">
+                <div style="flex-shrink: 0;">
+                  <img src="../assets/img/utensilios.jpg" class="card-img-top" style="height: 250px; object-fit: cover;" alt="Utensilios de servicio">
+                </div>
+                <div class="card-body overflow-auto">
+                  <h5 class="card-title">Manipulación y servicio</h5>
+                  <p class="card-text">Espátulas, cucharones y más: indispensables del día a día.</p>
+                  <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalManipulacion">Ver herramientas</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card: Medición y precisión -->
+            <div class="col">
+              <div class="card shadow-sm d-flex flex-column" style="max-height: 80vh;">
+                <div style="flex-shrink: 0;">
+                  <img src="../assets/img/medicion.jpg" class="card-img-top" style="height: 250px; object-fit: cover;" alt="Herramientas de medición">
+                </div>
+                <div class="card-body overflow-auto">
+                  <h5 class="card-title">Medición y precisión</h5>
+                  <p class="card-text">Básculas, cucharas medidoras, termómetros y más.</p>
+                  <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalMedicion">Ver herramientas</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card: Electrodomésticos pequeños -->
+            <div class="col">
+              <div class="card shadow-sm d-flex flex-column" style="max-height: 80vh;">
+                <div style="flex-shrink: 0;">
+                  <img src="../assets/img/procesadora.jpg" class="card-img-top" style="height: 250px; object-fit: cover;" alt="Electrodomésticos pequeños">
+                </div>
+                <div class="card-body overflow-auto">
+                  <h5 class="card-title">Electrodomésticos pequeños</h5>
+                  <p class="card-text">Desde batidoras hasta procesadores. Uso y mantenimiento.</p>
+                  <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalElectro">Ver herramientas</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card: Repostería -->
+            <div class="col">
+              <div class="card shadow-sm d-flex flex-column" style="max-height: 80vh;">
+                <div style="flex-shrink: 0;">
+                  <img src="../assets/img/reposteria.jpg" class="card-img-top" style="height: 250px; object-fit: cover;" alt="Utensilios de repostería">
+                </div>
+                <div class="card-body overflow-auto">
+                  <h5 class="card-title">Utensilios de repostería</h5>
+                  <p class="card-text">Moldes, bandejas, varillas y accesorios para hornear.</p>
+                  <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalReposteria">Ver herramientas</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card: Conservación y almacenamiento -->
+            <div class="col">
+              <div class="card shadow-sm d-flex flex-column" style="max-height: 80vh;">
+                <div style="flex-shrink: 0;">
+                  <img src="../assets/img/vacio.jpeg" class="card-img-top" style="height: 250px; object-fit: cover;" alt="Conservación y almacenamiento">
+                </div>
+                <div class="card-body overflow-auto">
+                  <h5 class="card-title">Conservación y almacenamiento</h5>
+                  <p class="card-text">Recipientes herméticos, bolsas al vacío y más.</p>
+                  <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalConservacion">Ver herramientas</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card: Utensilios específicos -->
+            <div class="col">
+              <div class="card shadow-sm d-flex flex-column" style="max-height: 80vh;">
+                <div style="flex-shrink: 0;">
+                  <img src="../assets/img/mandolina.jpg" class="card-img-top" style="height: 250px; object-fit: cover;" alt="Utensilios especiales">
+                </div>
+                <div class="card-body overflow-auto">
+                  <h5 class="card-title">Utensilios específicos</h5>
+                  <p class="card-text">Para tareas concretas: prensapapas, espirales, mandolinas...</p>
+                  <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalEspecificos">Ver herramientas</button>
+                </div>
+              </div>
+            </div>
+
+    
+          </div>
+        </div>
+      </div>
+    
+    
+    
+      <!-- Modal: Cuchillos y herramientas de corte -->
+        <div class="modal fade" id="modalCorte" tabindex="-1" aria-labelledby="modalCorteLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modalCorteLabel">Cuchillos y herramientas de corte</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+              </div>
+              <div class="modal-body">
+                <p>Los cuchillos son una extensión de las manos en la cocina. Elegir bien el tipo, saber mantenerlos afilados y utilizarlos adecuadamente mejora la precisión, la seguridad y la eficiencia durante la preparación de alimentos.</p>
+
+                <div class="accordion accordion-flush" id="accordionCorte">
+
+                  <!-- Cuchillo de chef -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingChef">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseChef" aria-expanded="false" aria-controls="collapseChef">
+                        Cuchillo de chef
+                      </button>
+                    </h2>
+                    <div id="collapseChef" class="accordion-collapse collapse" aria-labelledby="headingChef" data-bs-parent="#accordionCorte">
+                      <div class="accordion-body">
+                        <div class="row">
+                          <div class="col-md-4 mb-3">
+                            <img src="../assets/img/cuchillochef.jpg" alt="Cuchillo de chef" class="img-fluid rounded">
+                          </div>
+                          <div class="col-md-8">
+                            <p><strong>¿Para qué sirve?</strong> Es el cuchillo más versátil. Se utiliza para cortar, picar, trocear y filetear la mayoría de los ingredientes.</p>
+                            <p><strong>¿Cómo se usa?</strong> Su hoja curva permite movimientos de balanceo para picar o cortar de forma segura.</p>
+                            <p><strong>Consejos:</strong></p>
+                            <ul>
+                              <li>Mantén siempre el filo afilado.</li>
+                              <li>No lo laves en lavavajillas.</li>
+                              <li>Usa una tabla adecuada para evitar dañar el filo.</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Pelador -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingPelar">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePelar" aria-expanded="false" aria-controls="collapsePelar">
+                        Pelador
+                      </button>
+                    </h2>
+                    <div id="collapsePelar" class="accordion-collapse collapse" aria-labelledby="headingPelar" data-bs-parent="#accordionCorte">
+                      <div class="accordion-body">
+                        <div class="row">
+                          <div class="col-md-4 mb-3">
+                            <img src="../assets/img/pelador.jpg" alt="Pelador de verduras" class="img-fluid rounded">
+                          </div>
+                          <div class="col-md-8">
+                            <p><strong>¿Para qué sirve?</strong> Para pelar con rapidez frutas y vegetales sin desperdiciar pulpa.</p>
+                            <p><strong>¿Cómo se usa?</strong> Se desliza sobre la piel del alimento con movimientos suaves.</p>
+                            <p><strong>Tipos:</strong> recto o en forma de Y (más ergonómico).</p>
+                            <p><strong>Consejo:</strong> También sirve para cortar láminas finas de queso o chocolate.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Cuchillo de sierra -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingSierra">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSierra" aria-expanded="false" aria-controls="collapseSierra">
+                        Cuchillo de sierra
+                      </button>
+                    </h2>
+                    <div id="collapseSierra" class="accordion-collapse collapse" aria-labelledby="headingSierra" data-bs-parent="#accordionCorte">
+                      <div class="accordion-body">
+                        <div class="row">
+                          <div class="col-md-4 mb-3">
+                            <img src="../assets/img/cuchillosierra.jpg" alt="Cuchillo de sierra" class="img-fluid rounded">
+                          </div>
+                          <div class="col-md-8">
+                            <p><strong>¿Para qué sirve?</strong> Ideal para cortar pan, tomates y pasteles sin aplastar.</p>
+                            <p><strong>¿Cómo se usa?</strong> Se utiliza con un movimiento de vaivén, como una sierra.</p>
+                            <p><strong>Consejos:</strong></p>
+                            <ul>
+                              <li>No lo afiles con métodos convencionales.</li>
+                              <li>Usa exclusivamente para panadería o frutas blandas.</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Cuchillo puntilla -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingPuntilla">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePuntilla" aria-expanded="false" aria-controls="collapsePuntilla">
+                        Cuchillo puntilla
+                      </button>
+                    </h2>
+                    <div id="collapsePuntilla" class="accordion-collapse collapse" aria-labelledby="headingPuntilla" data-bs-parent="#accordionCorte">
+                      <div class="accordion-body">
+                        <div class="row">
+                          <div class="col-md-4 mb-3">
+                            <img src="../assets/img/puntilla.jpg" alt="Cuchillo puntilla" class="img-fluid rounded">
+                          </div>
+                          <div class="col-md-8">
+                            <p><strong>¿Para qué sirve?</strong> Para pelar frutas, retirar semillas o realizar cortes pequeños con precisión.</p>
+                            <p><strong>¿Cómo se usa?</strong> Se sujeta con los dedos cerca de la hoja para mayor control.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Chaira o afilador -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingChaira">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseChaira" aria-expanded="false" aria-controls="collapseChaira">
+                        Chaira o afilador
+                      </button>
+                    </h2>
+                    <div id="collapseChaira" class="accordion-collapse collapse" aria-labelledby="headingChaira" data-bs-parent="#accordionCorte">
+                      <div class="accordion-body">
+                        <div class="row">
+                          <div class="col-md-4 mb-3">
+                            <img src="../assets/img/chaira.jpg" alt="Chaira o afilador" class="img-fluid rounded">
+                          </div>
+                          <div class="col-md-8">
+                            <p><strong>¿Para qué sirve?</strong> Para mantener el filo de los cuchillos entre usos.</p>
+                            <p><strong>¿Cómo se usa?</strong> Desliza el cuchillo por ambos lados de la chaira a 20° de inclinación.</p>
+                            <p><strong>Consejo:</strong> No afila cuchillos muy desafilados, solo mantiene el filo existente.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div> <!-- Fin accordion -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+       <!-- Modal: Sistemas de calor y cocción -->
+        <div class="modal fade" id="modalCalor" tabindex="-1" aria-labelledby="modalCalorLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modalCalorLabel">Sistemas de calor y cocción</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+              </div>
+              <div class="modal-body">
+                <p>Comprender cómo funcionan los sistemas de calor en la cocina te permite elegir con criterio el equipamiento adecuado.</p>
+
+                <div class="accordion" id="accordionCalor">
+
+                  <!-- Cocinas a gas o eléctricas -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingCocina">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCocina" aria-expanded="true" aria-controls="collapseCocina">
+                        Cocinas a gas o eléctricas
+                      </button>
+                    </h2>
+                    <div id="collapseCocina" class="accordion-collapse collapse show" aria-labelledby="headingCocina" data-bs-parent="#accordionCalor">
+                      <div class="accordion-body">
+                        <img src="../assets/img/cocinagas.jpg" class="img-fluid mb-3" alt="cocina de gas">
+
+                        <p><strong>¿Para qué sirve?</strong> Son la base de la mayoría de preparaciones. Permiten aplicar calor directo a ollas, sartenes y cazuelas, facilitando una gran variedad de técnicas: hervido, salteado, fritura, sellado, etc.</p>
+                
+                        <p><strong>¿Cómo se usa?</strong> Las cocinas a gas funcionan regulando el flujo de gas mediante una perilla que activa una llama abierta. Las eléctricas calientan mediante resistencias o inducción, lo que permite mayor control de temperatura y seguridad.</p>
+                
+                        <p><strong>Materiales:</strong> Las encimeras suelen estar hechas de acero inoxidable o cristal templado. Las cocinas de inducción requieren utensilios ferromagnéticos (como acero con fondo ferrítico o hierro fundido).</p>
+                
+                        <p><strong>Consejos:</strong></p>
+                        <ul>
+                          <li>Revisa periódicamente los conductos si usas gas: una fuga puede ser peligrosa.</li>
+                          <li>Para inducción, prueba tus ollas con un imán: si se pega, son compatibles.</li>
+                          <li>En cocinas eléctricas, aprovecha el calor residual para terminar cocciones y ahorrar energía.</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                
+                  <!-- Hornos convencionales y microondas -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingHorno">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHorno" aria-expanded="false" aria-controls="collapseHorno">
+                        Hornos convencionales y microondas
+                      </button>
+                    </h2>
+                    <div id="collapseHorno" class="accordion-collapse collapse" aria-labelledby="headingHorno" data-bs-parent="#accordionCalor">
+                      <div class="accordion-body">
+                        <img src="../assets/img/horno.jpg" class="img-fluid mb-3" alt="horno">
+
+                        <p><strong>¿Para qué sirve?</strong> El horno convencional permite hornear, asar y gratinar. Es ideal para panes, repostería, carnes y vegetales. El microondas, por su parte, es útil para recalentar, descongelar o cocer rápidamente.</p>
+                
+                        <p><strong>¿Cómo se usa?</strong> En el horno, se ajusta la temperatura y el tiempo según la receta; algunos modelos tienen funciones de ventilación (convección), grill o vapor. El microondas utiliza ondas electromagnéticas que agitan las moléculas de agua en los alimentos para generar calor.</p>
+                
+                        <p><strong>Materiales:</strong> Hornos de acero o con esmalte antiadherente. Algunos tienen doble vidrio para conservar el calor y evitar accidentes. Los recipientes para microondas deben ser de vidrio, silicona o plástico apto.</p>
+                
+                        <p><strong>Consejos:</strong></p>
+                        <ul>
+                          <li>Precalentar el horno mejora los resultados de cocción, especialmente en panadería.</li>
+                          <li>Evita usar papel aluminio o recipientes metálicos en el microondas.</li>
+                          <li>No sobrecargues el horno: deja espacio para que el calor circule de forma homogénea.</li>
+                          <li>Limpia frecuentemente los residuos en el horno para evitar humos y sabores extraños.</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                
+                </div>
+                
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal: Ollas, sartenes y recipientes -->
+        <div class="modal fade" id="modalRecipientes" tabindex="-1" aria-labelledby="modalRecipientesLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modalRecipientesLabel">Ollas, sartenes y recipientes</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+              </div>
+              <div class="modal-body">
+                <p>La elección del material correcto influye en la cocción, la seguridad alimentaria y la durabilidad de tus utensilios.</p>
+
+                <div class="accordion" id="accordionRecipientes">
+
+                  <!-- Acero inoxidable -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingInox">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInox" aria-expanded="true" aria-controls="collapseInox">
+                        Sartenes y ollas de acero inoxidable
+                      </button>
+                    </h2>
+                    <div id="collapseInox" class="accordion-collapse collapse show" aria-labelledby="headingInox" data-bs-parent="#accordionRecipientes">
+                      <div class="accordion-body">
+                        <img src="../assets/img/sartenaceroinox.jpg" class="img-fluid mb-3" alt="acero inox">
+                        <p><strong>¿Para qué sirve?</strong> Para salteados, hervidos y cocciones rápidas. Excelente para dorar carnes y preparar bases de salsas.</p>
+                        <p><strong>¿Cómo se usa?</strong> Debe precalentarse adecuadamente antes de añadir aceite. El truco de la “gota de agua” indica si está lista: si la gota forma una bolita que rebota, puedes cocinar sin que se pegue.</p>
+                        <p><strong>Material:</strong> Acero inoxidable de varias capas (acero + aluminio o cobre) para mejorar la conducción del calor.</p>
+                        <p><strong>Consejos:</strong></p>
+                        <ul>
+                          <li>Evita fuego alto excesivo, podría manchar el acero o deformarlo.</li>
+                          <li>Ideal para desglasar con vino o caldo tras saltear: recuperas los jugos adheridos.</li>
+                          <li>No es antiadherente, pero bien usado no pega.</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                
+                  <!-- Antiadherente / Teflón -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTeflon">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTeflon" aria-expanded="false" aria-controls="collapseTeflon">
+                        Sartenes con recubrimiento antiadherente (teflón, cerámica)
+                      </button>
+                    </h2>
+                    <div id="collapseTeflon" class="accordion-collapse collapse" aria-labelledby="headingTeflon" data-bs-parent="#accordionRecipientes">
+                      <div class="accordion-body">
+                        <img src="../assets/img/sartenteflon.jpg" class="img-fluid mb-3" alt="teflon">
+                        <p><strong>¿Para qué sirve?</strong> Perfectas para huevos, tortillas, panqueques y alimentos delicados que no deben pegarse.</p>
+                        <p><strong>¿Cómo se usa?</strong> A fuego bajo o medio. Nunca sobrecalentar: puede dañar el recubrimiento y liberar sustancias tóxicas (en el caso del teflón).</p>
+                        <p><strong>Materiales:</strong> Aluminio con capa antiadherente (teflón, cerámica, titanio).</p>
+                        <p><strong>Consejos:</strong></p>
+                        <ul>
+                          <li>Utiliza solo espátulas de silicona o madera.</li>
+                          <li>No aptas para lavavajillas si quieres que duren más.</li>
+                          <li>Sustituye si se raya o despega el revestimiento.</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                
+                  <!-- Hierro fundido -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingHierro">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHierro" aria-expanded="false" aria-controls="collapseHierro">
+                        Ollas y sartenes de hierro fundido
+                      </button>
+                    </h2>
+                    <div id="collapseHierro" class="accordion-collapse collapse" aria-labelledby="headingHierro" data-bs-parent="#accordionRecipientes">
+                      <div class="accordion-body">
+                        <img src="../assets/img/hierrofundido.jpeg" class="img-fluid mb-3" alt="hierro fundido">
+                        <p><strong>¿Para qué sirve?</strong> Excelente para sellar carnes, cocciones prolongadas, pan artesanal y guisos de alta temperatura.</p>
+                        <p><strong>¿Cómo se usa?</strong> Calienta progresivamente. Deben curarse antes del primer uso (si no están esmaltadas) y engrasarse tras cada lavado.</p>
+                        <p><strong>Material:</strong> Hierro fundido, con o sin esmalte. Muy duradero si se cuida bien.</p>
+                        <p><strong>Consejos:</strong></p>
+                        <ul>
+                          <li>Manténlas bien secas y ligeramente aceitadas para evitar óxido.</li>
+                          <li>Ideales para horno y fuego directo.</li>
+                          <li>Son pesadas: cuidado al manipularlas.</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                
+                  <!-- Vidrio y cerámica -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingCeramica">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCeramica" aria-expanded="false" aria-controls="collapseCeramica">
+                        Recipientes de vidrio o cerámica
+                      </button>
+                    </h2>
+                    <div id="collapseCeramica" class="accordion-collapse collapse" aria-labelledby="headingCeramica" data-bs-parent="#accordionRecipientes">
+                      <div class="accordion-body">
+                        <img src="../assets/img/ceramica.jpg" class="img-fluid mb-3" alt="ceramica">
+                        <p><strong>¿Para qué sirve?</strong> Ideales para horno: gratinados, postres, pasteles, lasañas y comidas que deban servirse en el mismo recipiente.</p>
+                        <p><strong>¿Cómo se usa?</strong> No deben colocarse sobre fuego directo. Aptos para horno y microondas.</p>
+                        <p><strong>Materiales:</strong> Vidrio templado (tipo Pyrex) o cerámica vitrificada.</p>
+                        <p><strong>Consejos:</strong></p>
+                        <ul>
+                          <li>Evita cambios bruscos de temperatura para prevenir grietas.</li>
+                          <li>Fáciles de limpiar, pero frágiles a golpes.</li>
+                          <li>Muchas versiones actuales tienen tapas para refrigerar o conservar directamente.</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                
+                  <!-- Olla Exprés -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingExpress">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExpress" aria-expanded="false" aria-controls="collapseExpress">
+                        La Olla Exprés
+                      </button>
+                    </h2>
+                    <div id="collapseExpress" class="accordion-collapse collapse" aria-labelledby="headingExpress" data-bs-parent="#accordionRecipientes">
+                      <div class="accordion-body">
+                        <img src="../assets/img/ollaexpress.jpg" class="img-fluid mb-3" alt="olla express">
+                        <p><strong>¿Para qué sirve?</strong> Ideal para preparar guisos, carnes, legumbres y caldos de forma mucho más rápida que con una olla tradicional.</p>
+                        <p><strong>¿Cómo funciona?</strong> Sella herméticamente el interior, permitiendo que el vapor eleve la presión interna. Esto sube el punto de ebullición del agua, cocinando los alimentos más rápido.</p>
+                        <p><strong>Materiales:</strong> Acero inoxidable o aluminio grueso. Incluye válvula de seguridad, mango ergonómico y tapa con cierre a presión.</p>
+                        <p><strong>Beneficios:</strong></p>
+                        <ul>
+                          <li>Reduce los tiempos de cocción hasta un 70 %.</li>
+                          <li>Preserva mejor los nutrientes al cocinar más rápido.</li>
+                          <li>Ahorra energía.</li>
+                        </ul>
+                        <p><strong>Consejos:</strong></p>
+                        <ul>
+                          <li>No abrir hasta que toda la presión haya sido liberada.</li>
+                          <li>Verificar que la válvula no esté obstruida.</li>
+                          <li>No llenar más de 2/3 de su capacidad.</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal: Manipulación y servicio -->
+        <div class="modal fade" id="modalManipulacion" tabindex="-1" aria-labelledby="modalManipulacionLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modalManipulacionLabel">Utensilios de manipulación y servicio</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+              </div>
+              <div class="modal-body">
+                <p>Estos utensilios permiten mover, mezclar, servir y trabajar los alimentos en todo tipo de preparaciones. Son básicos en cualquier cocina, desde la doméstica hasta la profesional. La elección del material influye en su durabilidad y compatibilidad con diferentes tipos de sartenes y ollas.</p>
+
+                <div class="accordion" id="accordionManipulacion">
+
+                  <!-- Espátulas -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingEspatula">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEspatula" aria-expanded="true" aria-controls="collapseEspatula">
+                        Espátulas
+                      </button>
+                    </h2>
+                    <div id="collapseEspatula" class="accordion-collapse collapse show" aria-labelledby="headingEspatula" data-bs-parent="#accordionManipulacion">
+                      <div class="accordion-body">
+                        <img src="../assets/img/espatulas.jpg" class="img-fluid mb-3" alt="Espátula de cocina">
+                        <p><strong>¿Para qué sirve?</strong> Para remover y voltear alimentos en sartenes o bandejas, especialmente los delicados como tortillas, crepes o pescados.</p>
+                        <p><strong>¿Cómo se usa?</strong> Introduce suavemente bajo el alimento, permitiendo voltearlo o desplazarlo sin romperlo.</p>
+                        <p><strong>Materiales:</strong> Silicona, madera o acero inoxidable.</p>
+                        <p><strong>Consejos:</strong></p>
+                        <ul>
+                          <li>Usa espátulas de silicona o madera en superficies antiadherentes para no dañarlas.</li>
+                          <li>Las de acero son resistentes, ideales para planchas o parrillas.</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Cucharones -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingCucharones">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCucharones" aria-expanded="false" aria-controls="collapseCucharones">
+                        Cucharones
+                      </button>
+                    </h2>
+                    <div id="collapseCucharones" class="accordion-collapse collapse" aria-labelledby="headingCucharones" data-bs-parent="#accordionManipulacion">
+                      <div class="accordion-body">
+                        <img src="../assets/img/cucharones.jpg" class="img-fluid mb-3" alt="Cucharón de cocina">
+                        <p><strong>¿Para qué sirve?</strong> Para servir líquidos como sopas, caldos, cremas y salsas en porciones cómodas y limpias.</p>
+                        <p><strong>¿Cómo se usa?</strong> Se introduce en la olla o cacerola para extraer el contenido y servirlo directamente al plato.</p>
+                        <p><strong>Materiales:</strong> Acero inoxidable, melamina, nylon o silicona.</p>
+                        <p><strong>Consejos:</strong></p>
+                        <ul>
+                          <li>Elige mango largo para evitar quemaduras.</li>
+                          <li>Algunos incluyen boquilla o pico para servir con precisión.</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Pinzas de cocina -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingPinzas">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePinzas" aria-expanded="false" aria-controls="collapsePinzas">
+                        Pinzas de cocina
+                      </button>
+                    </h2>
+                    <div id="collapsePinzas" class="accordion-collapse collapse" aria-labelledby="headingPinzas" data-bs-parent="#accordionManipulacion">
+                      <div class="accordion-body">
+                        <img src="../assets/img/pinzas.webp" class="img-fluid mb-3" alt="Pinzas de cocina">
+                        <p><strong>¿Para qué sirve?</strong> Manipular con precisión alimentos calientes como carnes, vegetales a la parrilla, pastas o fritos, sin pinchar ni romper.</p>
+                        <p><strong>¿Cómo se usa?</strong> Permiten un agarre firme y seguro gracias a su diseño con presión mecánica controlada.</p>
+                        <p><strong>Materiales:</strong> Acero inoxidable, silicona, plástico resistente al calor.</p>
+                        <p><strong>Consejos:</strong></p>
+                        <ul>
+                          <li>Las de punta de silicona son ideales para sartenes antiadherentes.</li>
+                          <li>Evita las de plástico económico: pueden deformarse con el calor.</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Batidores manuales -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingBatidores">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBatidores" aria-expanded="false" aria-controls="collapseBatidores">
+                        Batidores manuales
+                      </button>
+                    </h2>
+                    <div id="collapseBatidores" class="accordion-collapse collapse" aria-labelledby="headingBatidores" data-bs-parent="#accordionManipulacion">
+                      <div class="accordion-body">
+                        <img src="../assets/img/varillas.jpg" class="img-fluid mb-3" alt="Batidor de varillas">
+                        <p><strong>¿Para qué sirve?</strong> Para emulsionar, mezclar o batir líquidos y cremas: vinagretas, huevos, nata, etc.</p>
+                        <p><strong>¿Cómo se usa?</strong> Se mueve de forma circular o enérgica para incorporar aire o mezclar ingredientes de forma homogénea.</p>
+                        <p><strong>Material:</strong> Varillas de acero inoxidable, a veces con mangos de madera o goma.</p>
+                        <p><strong>Consejos:</strong></p>
+                        <ul>
+                          <li>Elige el tamaño del batidor según la cantidad que vayas a mezclar.</li>
+                          <li>No aptos para masas densas (usa batidora eléctrica en esos casos).</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal: Medición y precisión -->
+        <div class="modal fade" id="modalMedicion" tabindex="-1" aria-labelledby="modalMedicionLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modalMedicionLabel">Herramientas de medición y precisión</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+              </div>
+              <div class="modal-body">
+                <p>Medir con precisión es crucial en cocina, especialmente en repostería, donde el equilibrio de ingredientes afecta directamente al resultado final. Estas herramientas permiten cocinar con rigor, evitar errores comunes y replicar recetas con éxito.</p>
+
+                <div class="accordion" id="accordionMedicion">
+
+                  <!-- Báscula de cocina -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingBascula">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBascula" aria-expanded="true" aria-controls="collapseBascula">
+                        Básculas de cocina
+                      </button>
+                    </h2>
+                    <div id="collapseBascula" class="accordion-collapse collapse show" aria-labelledby="headingBascula" data-bs-parent="#accordionMedicion">
+                      <div class="accordion-body">
+                        <img src="../assets/img/vascula.webp" class="img-fluid mb-3" alt="Báscula de cocina">
+                        <ul>
+                          <li><strong>¿Para qué sirve?</strong> Para pesar ingredientes sólidos o líquidos, especialmente en recetas exactas.</li>
+                          <li><strong>¿Cómo se usa?</strong> Coloca el recipiente sobre la báscula y tara (ajusta a 0), luego añade el ingrediente.</li>
+                          <li><strong>Tipos:</strong> Básculas digitales (más precisas) y analógicas.</li>
+                          <li><strong>Consejo:</strong> Elige una que permita cambiar entre gramos, onzas y mililitros.</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Cucharas y tazas medidoras -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingCucharas">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCucharas" aria-expanded="false" aria-controls="collapseCucharas">
+                        Cucharas y tazas medidoras
+                      </button>
+                    </h2>
+                    <div id="collapseCucharas" class="accordion-collapse collapse" aria-labelledby="headingCucharas" data-bs-parent="#accordionMedicion">
+                      <div class="accordion-body">
+                        <img src="../assets/img/cucharamedidora.png" class="img-fluid mb-3" alt="Cucharas medidoras">
+                        <ul>
+                          <li><strong>¿Para qué sirve?</strong> Para medir pequeñas cantidades de ingredientes secos o líquidos como especias, levadura o aceite.</li>
+                          <li><strong>¿Cómo se usa?</strong> Rellena completamente la cuchara o taza y nivela con el reverso de un cuchillo para mayor exactitud.</li>
+                          <li><strong>Materiales:</strong> Acero inoxidable, plástico o silicona.</li>
+                          <li><strong>Consejo:</strong> Usa medidas estándar: 1 cucharada (15 ml), 1 cucharadita (5 ml), etc.</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Jarra medidora -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingJarra">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseJarra" aria-expanded="false" aria-controls="collapseJarra">
+                        Jarras medidoras
+                      </button>
+                    </h2>
+                    <div id="collapseJarra" class="accordion-collapse collapse" aria-labelledby="headingJarra" data-bs-parent="#accordionMedicion">
+                      <div class="accordion-body">
+                        <img src="../assets/img/tazamedidora.jpg" class="img-fluid mb-3" alt="Jarra medidora">
+                        <ul>
+                          <li><strong>¿Para qué sirve?</strong> Para medir líquidos en grandes cantidades como agua, leche o caldo.</li>
+                          <li><strong>¿Cómo se usa?</strong> Vierte el líquido y colócate al nivel del recipiente para ver correctamente la escala.</li>
+                          <li><strong>Consejo:</strong> Usa jarras con múltiples unidades (ml, oz, cups) para más versatilidad.</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Termómetro de cocina -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTermometro">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTermometro" aria-expanded="false" aria-controls="collapseTermometro">
+                        Termómetros de cocina
+                      </button>
+                    </h2>
+                    <div id="collapseTermometro" class="accordion-collapse collapse" aria-labelledby="headingTermometro" data-bs-parent="#accordionMedicion">
+                      <div class="accordion-body">
+                        <img src="../assets/img/ternometro.webp" class="img-fluid mb-3" alt="Termómetro de cocina">
+                        <ul>
+                          <li><strong>¿Para qué sirve?</strong> Para controlar la temperatura interna de carnes, líquidos, frituras o masas.</li>
+                          <li><strong>¿Cómo se usa?</strong> Inserta en el centro del alimento o líquido sin tocar el fondo del recipiente.</li>
+                          <li><strong>Tipos:</strong> Digitales (más precisos y rápidos) o analógicos.</li>
+                          <li><strong>Consejo:</strong> Fundamental para recetas seguras (p. ej. 75 °C en pollo) o técnicas como el caramelo o el chocolate.</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal: Electrodomésticos pequeños -->
+        <div class="modal fade" id="modalElectro" tabindex="-1" aria-labelledby="modalElectroLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modalElectroLabel">Electrodomésticos pequeños</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+              </div>
+              <div class="modal-body">
+                <p>Los electrodomésticos pequeños agilizan muchas tareas culinarias y permiten lograr texturas o técnicas que manualmente serían más complejas. Conocer sus funciones y cuidados ayuda a sacarles mayor provecho y alargar su vida útil.</p>
+
+                <div class="accordion" id="accordionElectro">
+
+                  <!-- Batidora -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingBatidora">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBatidora" aria-expanded="true" aria-controls="collapseBatidora">
+                        Batidora (de mano o vaso)
+                      </button>
+                    </h2>
+                    <div id="collapseBatidora" class="accordion-collapse collapse show" aria-labelledby="headingBatidora" data-bs-parent="#accordionElectro">
+                      <div class="accordion-body">
+                        <img src="../assets/img/batidora.jpg" class="img-fluid mb-3" alt="Batidora de mano">
+                        <ul>
+                          <li><strong>¿Para qué sirve?</strong> Mezclar, emulsionar, batir y triturar alimentos como purés, salsas o batidos.</li>
+                          <li><strong>¿Cómo se usa?</strong> Sumerge en el recipiente y acciona por pulsos. Mueve ligeramente para una mezcla uniforme.</li>
+                          <li><strong>Tipos:</strong> De mano (inmersión), de vaso (licuadora), o con accesorios intercambiables.</li>
+                          <li><strong>Consejo:</strong> No sobrecalientes el motor. Desmonta y limpia bien las cuchillas tras cada uso.</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Procesador de alimentos -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingProcesador">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseProcesador" aria-expanded="false" aria-controls="collapseProcesador">
+                        Procesador de alimentos
+                      </button>
+                    </h2>
+                    <div id="collapseProcesador" class="accordion-collapse collapse" aria-labelledby="headingProcesador" data-bs-parent="#accordionElectro">
+                      <div class="accordion-body">
+                        <img src="../assets/img/procesadora2.jpg" class="img-fluid mb-3" alt="Procesador de alimentos">
+                        <ul>
+                          <li><strong>¿Para qué sirve?</strong> Picar, rallar, rebanar, triturar y preparar masas rápidamente.</li>
+                          <li><strong>¿Cómo se usa?</strong> Añade los ingredientes y selecciona el accesorio según la tarea (cuchilla, disco rallador...).</li>
+                          <li><strong>Ventajas:</strong> Ahorra tiempo y ofrece resultados uniformes.</li>
+                          <li><strong>Consejo:</strong> No sobrecargar. Usa pulsos para evitar sobreprocesar alimentos delicados.</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Batidora amasadora -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingAmasadora">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAmasadora" aria-expanded="false" aria-controls="collapseAmasadora">
+                        Batidora amasadora
+                      </button>
+                    </h2>
+                    <div id="collapseAmasadora" class="accordion-collapse collapse" aria-labelledby="headingAmasadora" data-bs-parent="#accordionElectro">
+                      <div class="accordion-body">
+                        <img src="../assets/img/batidoraamasadora.jpg" class="img-fluid mb-3" alt="Batidora amasadora">
+                        <ul>
+                          <li><strong>¿Para qué sirve?</strong> Ideal para masas pesadas como pan, pizza o repostería. También para montar claras o nata.</li>
+                          <li><strong>¿Cómo se usa?</strong> Usa el gancho para masas, varillas para batir o el batidor plano según la preparación.</li>
+                          <li><strong>Consejo:</strong> No mezcles masas duras en exceso para evitar dañar el motor.</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Molinillo o molinillo de café -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingMolinillo">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMolinillo" aria-expanded="false" aria-controls="collapseMolinillo">
+                        Molinillo eléctrico
+                      </button>
+                    </h2>
+                    <div id="collapseMolinillo" class="accordion-collapse collapse" aria-labelledby="headingMolinillo" data-bs-parent="#accordionElectro">
+                      <div class="accordion-body">
+                        <img src="../assets/img/molinillo.jpg" class="img-fluid mb-3" alt="Molinillo eléctrico">
+                        <ul>
+                          <li><strong>¿Para qué sirve?</strong> Tritura granos como café, especias, semillas o frutos secos.</li>
+                          <li><strong>¿Cómo se usa?</strong> Añade el ingrediente seco y presiona el botón para triturar.</li>
+                          <li><strong>Consejo:</strong> Usa en tandas pequeñas. Limpia con un pincel seco para evitar que los residuos se humedezcan.</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+          <!-- Modal: Utensilios de repostería -->
+          <div class="modal fade" id="modalReposteria" tabindex="-1" aria-labelledby="modalReposteriaLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="modalReposteriaLabel">Utensilios de repostería</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                  <p>La repostería requiere precisión, técnica y las herramientas adecuadas para lograr buenos resultados. Desde moldes hasta mangas pasteleras, cada utensilio cumple una función específica.</p>
+
+                  <div class="accordion" id="accordionReposteria">
+
+                    <!-- Moldes para hornear -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingMoldes">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMoldes" aria-expanded="true" aria-controls="collapseMoldes">
+                          Moldes para hornear
+                        </button>
+                      </h2>
+                      <div id="collapseMoldes" class="accordion-collapse collapse show" aria-labelledby="headingMoldes" data-bs-parent="#accordionReposteria">
+                        <div class="accordion-body">
+                          <img src="../assets/img/moldes.jpg" class="img-fluid mb-3" alt="Moldes para repostería">
+                          <ul>
+                            <li><strong>¿Para qué sirve?</strong> Dar forma a bizcochos, pasteles, flanes o tartas.</li>
+                            <li><strong>Materiales:</strong> Silicona, aluminio, vidrio, cerámica o antiadherente.</li>
+                            <li><strong>Consejo:</strong> Engrasa y enharina el molde si no es de silicona. Los de silicona deben ir sobre una bandeja rígida para estabilidad.</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    
+                    <!-- Mangas pasteleras -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingMangas">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMangas" aria-expanded="false" aria-controls="collapseMangas">
+                          Mangas pasteleras y boquillas
+                        </button>
+                      </h2>
+                      <div id="collapseMangas" class="accordion-collapse collapse" aria-labelledby="headingMangas" data-bs-parent="#accordionReposteria">
+                        <div class="accordion-body">
+                          <img src="../assets/img/mangas.jpg" class="img-fluid mb-3" alt="Manga pastelera">
+                          <ul>
+                            <li><strong>¿Para qué sirve?</strong> Decorar tartas, rellenar postres o dosificar masas como churros o merengue.</li>
+                            <li><strong>Tipos:</strong> Desechables o reutilizables. Boquillas de acero o plástico, de distintos formatos.</li>
+                            <li><strong>Consejo:</strong> Rellena solo ⅔ de la manga para facilitar el manejo. Lava las boquillas con cepillo fino.</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modal: Conservación y almacenamiento -->
+          <div class="modal fade" id="modalConservacion" tabindex="-1" aria-labelledby="modalConservacionLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="modalConservacionLabel">Conservación y almacenamiento</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                  <p>La correcta conservación de los alimentos evita desperdicios, mantiene la frescura y garantiza la seguridad alimentaria. Aquí se presentan herramientas clave para el almacenamiento eficaz en la cocina.</p>
+
+                  <div class="accordion" id="accordionConservacion">
+
+
+                    <!-- Envasadoras al vacío -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingVacio">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseVacio" aria-expanded="false" aria-controls="collapseVacio">
+                          Envasadoras al vacío
+                        </button>
+                      </h2>
+                      <div id="collapseVacio" class="accordion-collapse collapse" aria-labelledby="headingVacio" data-bs-parent="#accordionConservacion">
+                        <div class="accordion-body">
+                          <img src="../assets/img/vacio2.jpg" class="img-fluid mb-3" alt="Envasadora al vacío">
+                          <ul>
+                            <li><strong>¿Para qué sirve?</strong> Aumenta la duración de los alimentos al eliminar el oxígeno que favorece su deterioro.</li>
+                            <li><strong>¿Cómo funciona?</strong> Aspira el aire de una bolsa especial y la sella herméticamente.</li>
+                            <li><strong>Consejo:</strong> Útil para carnes, pescados y vegetales. Ideal para cocciones al vacío (sous-vide).</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Frascos de vidrio -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingFrascos">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFrascos" aria-expanded="false" aria-controls="collapseFrascos">
+                          Frascos de vidrio y conservas
+                        </button>
+                      </h2>
+                      <div id="collapseFrascos" class="accordion-collapse collapse" aria-labelledby="headingFrascos" data-bs-parent="#accordionConservacion">
+                        <div class="accordion-body">
+                          <img src="../assets/img/frascos.jpg" class="img-fluid mb-3" alt="Frascos de vidrio">
+                          <ul>
+                            <li><strong>¿Para qué sirve?</strong> Conservar mermeladas, encurtidos, salsas o alimentos secos.</li>
+                            <li><strong>Material:</strong> Vidrio grueso resistente al calor. Tapas metálicas con cierre hermético.</li>
+                            <li><strong>Consejo:</strong> Esteriliza antes de rellenar. Almacena en lugar fresco y oscuro.</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modal: Utensilios específicos -->
+          <div class="modal fade" id="modalEspecificos" tabindex="-1" aria-labelledby="modalEspecificosLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="modalEspecificosLabel">Utensilios específicos para tareas concretas</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                  <p>Existen herramientas que, si bien no son imprescindibles en todas las cocinas, pueden ser extremadamente útiles para tareas especializadas. Aquí te presentamos algunas de ellas con sus beneficios, usos y recomendaciones.</p>
+
+                  <div class="accordion" id="accordionEspecificos">
+
+                    <!-- Prensapapas -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingPrensapapas">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePrensapapas" aria-expanded="true" aria-controls="collapsePrensapapas">
+                          Prensapapas
+                        </button>
+                      </h2>
+                      <div id="collapsePrensapapas" class="accordion-collapse collapse show" aria-labelledby="headingPrensapapas" data-bs-parent="#accordionEspecificos">
+                        <div class="accordion-body">
+                          <img src="../assets/img/prensapapas.webp" class="img-fluid mb-3" alt="Prensapapas">
+                          <ul>
+                            <li><strong>¿Para qué sirve?</strong> Machacar papas cocidas de forma uniforme, sin grumos.</li>
+                            <li><strong>¿Cómo se usa?</strong> Se coloca la papa dentro y se presiona el mango. Ideal para purés finos.</li>
+                            <li><strong>Materiales:</strong> Acero inoxidable, aluminio fundido.</li>
+                            <li><strong>Consejo:</strong> No presionar papas frías; deben estar recién cocidas para obtener mejor textura.</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Mandolina -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingMandolina">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMandolina" aria-expanded="false" aria-controls="collapseMandolina">
+                          Mandolina de cocina
+                        </button>
+                      </h2>
+                      <div id="collapseMandolina" class="accordion-collapse collapse" aria-labelledby="headingMandolina" data-bs-parent="#accordionEspecificos">
+                        <div class="accordion-body">
+                          <img src="../assets/img/mandolina.jpg" class="img-fluid mb-3" alt="Mandolina de cocina">
+                          <ul>
+                            <li><strong>¿Para qué sirve?</strong> Cortar frutas y verduras en láminas muy finas y uniformes.</li>
+                            <li><strong>¿Cómo se usa?</strong> Deslizar el alimento con cuidado sobre la cuchilla. Usar siempre el protector.</li>
+                            <li><strong>Materiales:</strong> Acero inoxidable, plástico resistente.</li>
+                            <li><strong>Consejo:</strong> Ideal para chips, carpaccios o gratinados. Mantener fuera del alcance infantil por su filo.</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+    </main>
+    
+
+      <footer class="text-body-secondary py-5">
+        <div class="container">
+          <p class="float-end mb-1">
+            <a href="#">Back to top</a>
+          </p>
+          <p class="mb-1">Manual web de introudccion a la cocina por: Miguel Zabal</p>
+        </div>
+      </footer>
+      <script defer src="../assets/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"></script>
+      <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
