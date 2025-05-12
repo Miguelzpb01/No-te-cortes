@@ -105,6 +105,23 @@
       .bd-mode-toggle .dropdown-menu .active .bi {
         display: block !important;
       }
+
+      @media (max-width: 768px) {
+        .row.g-0 {
+          height: auto !important;
+          flex-direction: column !important;
+        }
+
+        .row.g-0 img {
+          height: auto !important;
+          max-height: 40vh;
+          object-fit: contain;
+        }
+
+        .row.g-0 > .col-md-6 {
+          height: auto !important;
+        }
+      }
     </style>
 
     
